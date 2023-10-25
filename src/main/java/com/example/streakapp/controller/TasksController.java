@@ -60,7 +60,7 @@ public class TasksController {
             throw new TaskNotCreateException("task not created");
         }
 
-        return ResponseEntity.status(HttpStatus.CREATED).build(
+        return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
     @DeleteMapping("/api/v1/tasks/{id}/delete")
