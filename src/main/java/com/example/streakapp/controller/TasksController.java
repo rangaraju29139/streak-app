@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
+@CrossOrigin(origins = "http://${REACT_HOST_NAME:localhost}:3000")
 @RestController
 public class TasksController {
 
