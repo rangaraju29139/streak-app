@@ -80,4 +80,14 @@ public class TaskService{
         taskRepository.delete(task.get());
         return task;
     }
+
+    public Optional<Task> updateTaskName(Long id, String taskName) {
+        Optional<Task> task = taskRepository.findById(id);
+        if(task.isEmpty()){
+            return null;
+        }
+        task.get().setTaskName(taskName);
+        return Optional.of(taskRepository.save(task.get()));
+
+    }
 }
